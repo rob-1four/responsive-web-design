@@ -49,6 +49,14 @@ img {
   margin: 1em 0;
 }
 
+/* Media Query */
+@media screen and (max-width: 600px) {
+  .columns {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .col-1 {
   width: 20%;
 }
@@ -59,6 +67,15 @@ img {
 
 .col-3 {
   width: 70%;
+}
+
+/* Media queries class columns */
+@media screen and (max-width: 600px) {
+  .col-1,
+  .col-2,
+  .col-3 {
+    width: 100%;
+  }
 }
 
 .col-accent {
