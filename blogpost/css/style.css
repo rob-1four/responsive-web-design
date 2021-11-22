@@ -1,0 +1,67 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+}
+
+/* Typhography */
+.site-title h1 {
+  font-size: 3.375rem;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  color: #143774;
+  margin: 0;
+}
+
+.site-title p {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1792d2;
+  text-transform: uppercase;
+}
+
+/* layout */
+
+header {
+  width: 95%;
+  max-width: 980px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2em 0;
+  background: #f8f8f8;
+}
+
+/* Navigation */
+nav ul {
+  font-size: 1rem;
+  list-style-type: none;
+  padding: 0;
+  color: #707070;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  text-transform: uppercase;
+  margin: 0 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #707070;
+  font-weight: 700;
+  padding: 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #1792d2;
+}
+
+.current-page {
+  border-bottom: 1px solid #707070;
+}
+
+.current-page:hover {
+  color: #707070;
+}
