@@ -1,14 +1,49 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: 'Ubuntu', sans-serif;
+  font-size: 1.125rem;
   margin: 0;
+  color: #707070;
+  font-weight: 300;
 }
 
-/* Typhography */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*==============
+Typhography
+================*/
+
+h1,
+h2,
+h3 {
+  font-family: 'Lora', serif;
+  color: #143774;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+strong {
+  color: black;
+  font-weight: 700;
+}
+
+a {
+  color: #1792d2;
+  font-weight: 700;
+}
+
+a:hover,
+a:focus {
+  color: #143774;
+}
+
 .site-title h1 {
   font-size: 2rem;
-  font-family: 'Lora', serif;
-  font-weight: 400;
-  color: #143774;
   margin: 0;
 }
 
@@ -20,7 +55,35 @@ body {
   text-transform: uppercase;
 }
 
-/* layout */
+.article-title {
+  font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+  font-size: 0.875rem;
+}
+
+.article-info {
+  margin: 2em 0;
+}
+
+.article-read-more {
+  text-decoration: none;
+  color: #1792d2;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+  color: #143774;
+  text-decoration: underline;
+}
+
+/*===============
+layout
+=================*/
 
 .container {
   width: 90%;
@@ -28,26 +91,35 @@ body {
   margin: 0 auto;
 }
 
-.container-nav {
+.container-flex {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
-/* Media queries */
-@media screen and (max-width: 675px) {
-  .container-nav {
-    flex-direction: column;
-  }
-
-  /* header */
-  header {
-    text-align: center;
-  }
+/* header */
+header {
+  text-align: center;
+  padding: 2em 0;
 }
 
 header {
   padding: 2em 0;
-  background: #f8f8f8;
+  background: #dbd9d9;
+}
+
+@media screen and (min-width: 675px) {
+  .container-flex {
+    flex-direction: row;
+  }
+
+  main {
+    width: 75%;
+  }
+
+  aside {
+    width: 20%;
+  }
 }
 
 /* Media query -header */
@@ -95,5 +167,32 @@ nav a:focus {
 
   nav li {
     margin: 0.5em 0;
+  }
+}
+
+/* article */
+.article-featured {
+  border-bottom: 1px #707070 solid;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+}
+
+.article-recent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3em;
+}
+
+.article-recent-main {
+  order: 2;
+}
+
+.article-recent-secondary {
+  order: 1;
+}
+
+@media screen and (min-width: 675px) {
+  .article-recent {
+    flex-direction: row;
   }
 }
